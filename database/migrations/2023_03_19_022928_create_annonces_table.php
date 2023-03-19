@@ -19,13 +19,11 @@ return new class extends Migration
             $table->double('prix', 15, 8);
             $table->string('ville');
             $table->string('delegation');
-            $table->bigInteger('privilegeId')->unsigned()->default('3');
-            $table->foreign('privilegeId')->references('id')->on('privileges');
             $table->bigInteger('categorieId')->unsigned();
             $table->foreign('categorieId')->references('id')->on('categories');
             $table->bigInteger('sousCategorieId')->unsigned();
             $table->foreign('sousCategorieId')->references('id')->on('sousCategories');
-            $table->bigInteger('boutiqueId')->unsigned();
+            $table->bigInteger('boutiqueId')->unsigned()->nullable();
             $table->foreign('boutiqueId')->references('id')->on('boutiques');
             $table->timestamps();
         });

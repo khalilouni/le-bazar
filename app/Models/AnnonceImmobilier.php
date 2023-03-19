@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Immobilier extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['superficie', 'type', 'nombreChambre', 'nombreSalleBain', 'parking', 'annonceId'];
+
+}
